@@ -106,6 +106,22 @@
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
+
+<script>
+  const form = document.getElementById("form-contacto");
+  const mensaje = document.getElementById("mensaje-exito");
+  const boton = form.querySelector("button");
+  const input = form.querySelector("input[name='email']");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    mensaje.classList.remove("hidden");
+    boton.classList.add("hidden");
+    input.disabled = true;
+  });
+</script>
+
 <body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopAppBar -->
 <header class="bg-white/90 dark:bg-slate-950/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
@@ -132,18 +148,29 @@
         </p>
         <div class="bg-white p-6 rounded-2xl shadow-xl shadow-slate-200/50 max-w-md mx-auto lg:mx-0 border border-slate-100">
           <p class="font-label-bold text-slate-900 mb-4">Déjanos tu correo para noticias</p>
-          <form name="contacto" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3">
+
+          <form id="form-contacto" name="contacto" method="POST" data-netlify="true" class="flex flex-col gap-3">
+
             <input type="hidden" name="form-name" value="contacto">
-            <input
-              name="email"
-              class="flex-1 bg-surface-container-low border-none rounded-lg px-4 py-3 text-body-sm focus:ring-2 focus:ring-primary-container outline-none transition-all"
-              placeholder="tu@correo.edu.mx"
-              type="email"
-              required
-            />
-            <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg font-label-bold hover:bg-primary-fixed-dim transition-colors">
-              Me interesa
-            </button>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input
+                name="email"
+                class="flex-1 bg-surface-container-low border-none rounded-lg px-4 py-3 text-body-sm focus:ring-2 focus:ring-primary-container outline-none transition-all"
+                placeholder="tu@correo.edu.mx"
+                type="email"
+                required
+              />
+
+              <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg font-label-bold hover:bg-primary-fixed-dim transition-colors">
+                Me interesa
+              </button>
+            </div>
+
+            <p id="mensaje-exito" class="hidden text-green-600 text-sm font-medium">
+              ✅ Gracias, te avisaremos pronto
+            </p>
+
           </form>
         </div>
       </div>
