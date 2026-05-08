@@ -14,53 +14,49 @@
       theme: {
         extend: {
           "colors": {
-            "on-surface": "#0b1c30",
-            "inverse-surface": "#213145",
-            "error": "#ba1a1a",
-            "primary-fixed-dim": "#4ae176",
-            "surface-variant": "#d3e4fe",
-            "on-tertiary": "#ffffff",
-            "primary": "#006e2f",
-            "inverse-on-surface": "#eaf1ff",
-            "on-secondary-fixed": "#131b2e",
-            "on-primary-container": "#004b1e",
-            "inverse-primary": "#4ae176",
-            "surface-container-low": "#eff4ff",
-            "on-error-container": "#93000a",
-            "secondary-container": "#dae2fd",
-            "primary-fixed": "#6bff8f",
-            "on-secondary": "#ffffff",
-            "secondary-fixed-dim": "#bec6e0",
-            "secondary": "#565e74",
-            "on-secondary-fixed-variant": "#3f465c",
-            "surface": "#f8f9ff",
-            "surface-container-high": "#dce9ff",
-            "on-tertiary-fixed": "#410001",
-            "on-surface-variant": "#3d4a3d",
-            "on-tertiary-fixed-variant": "#7f2a21",
-            "on-secondary-container": "#5c647a",
-            "on-background": "#0b1c30",
-            "tertiary-fixed": "#ffdad5",
-            "outline-variant": "#bccbb9",
-            "error-container": "#ffdad6",
-            "surface-container-highest": "#d3e4fe",
-            "on-primary-fixed": "#002109",
-            "on-error": "#ffffff",
-            "background": "#f8f9ff",
-            "tertiary": "#9e4036",
-            "on-primary-fixed-variant": "#005321",
-            "tertiary-container": "#ff8b7c",
-            "outline": "#6d7b6c",
-            "surface-container": "#e5eeff",
-            "surface-bright": "#f8f9ff",
-            "surface-dim": "#cbdbf5",
+            "primary": "#7c3aed",
+            "primary-container": "#a855f7",
+            "primary-fixed-dim": "#8b5cf6",
+            "primary-fixed": "#c4b5fd",
+
+            "background": "#f5f3ff",
+            "surface": "#ffffff",
+            "surface-dim": "#ede9fe",
+            "surface-bright": "#faf5ff",
+
+            "surface-container": "#f3e8ff",
+            "surface-container-low": "#faf5ff",
+            "surface-container-high": "#e9d5ff",
+            "surface-container-highest": "#ddd6fe",
+
+            "on-background": "#111827",
+            "on-surface": "#111827",
+            "on-surface-variant": "#6b7280",
+
+            "secondary": "#6d28d9",
+            "secondary-container": "#ddd6fe",
+            "secondary-fixed": "#c4b5fd",
+            "secondary-fixed-dim": "#8b5cf6",
+
+            "outline": "#c4b5fd",
+            "outline-variant": "#ddd6fe",
+
+            "inverse-primary": "#c084fc",
+            "inverse-surface": "#1f2937",
+            "inverse-on-surface": "#f9fafb",
+
+            "tertiary": "#22c55e",
+            "tertiary-container": "#bbf7d0",
+
+            "error": "#ef4444",
+            "error-container": "#fee2e2",
+
             "on-primary": "#ffffff",
-            "surface-tint": "#006e2f",
-            "surface-container-lowest": "#ffffff",
-            "tertiary-fixed-dim": "#ffb4a9",
-            "secondary-fixed": "#dae2fd",
-            "primary-container": "#22c55e",
-            "on-tertiary-container": "#76231b"
+            "on-primary-container": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#4c1d95",
+            "on-error": "#ffffff",
+            "on-error-container": "#991b1b"
           },
           "borderRadius": {
             "DEFAULT": "0.25rem",
@@ -69,30 +65,30 @@
             "full": "9999px"
           },
           "spacing": {
-            "xl": "32px",
-            "container-margin": "16px",
-            "gutter": "12px",
-            "unit": "4px",
+            "sm": "8px",
             "lg": "24px",
-            "xs": "4px",
             "md": "16px",
-            "sm": "8px"
+            "xl": "32px",
+            "gutter": "12px",
+            "xs": "4px",
+            "unit": "4px",
+            "container-margin": "16px"
           },
           "fontFamily": {
-            "headline-md": ["Inter"],
+            "label-bold": ["Inter"],
             "label-md": ["Inter"],
-            "body-sm": ["Inter"],
-            "body-lg": ["Inter"],
             "headline-lg": ["Inter"],
-            "label-bold": ["Inter"]
+            "body-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-lg": ["Inter"]
           },
           "fontSize": {
-            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
             "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
             "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
-            "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
           }
         },
       },
@@ -101,21 +97,50 @@
   <style>
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
     }
+
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f8f9ff;
+      background: #f5f3ff;
     }
-    .hero-gradient {
-      background: linear-gradient(135deg, #006e2f 0%, #22c55e 100%);
+
+    /* NUEVA PALETA */
+    :root{
+      --violet-primary:#7c3aed;
+      --violet-dark:#5b21b6;
+      --violet-light:#a855f7;
+      --violet-soft:#ede9fe;
+      --violet-bg:#f5f3ff;
+      --dark:#111827;
+    }
+
+    .hero-gradient{
+      background: linear-gradient(
+        135deg,
+        #5b21b6 0%,
+        #7c3aed 45%,
+        #a855f7 100%
+      );
+    }
+
+    .glass-card{
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.3);
     }
   </style>
 </head>
 <body class="bg-background text-on-surface">
 <!-- TopAppBar -->
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin h-16 bg-surface dark:bg-on-surface shadow-sm">
-  <div class="flex items-center gap-md">
-    <span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">ViaLibre</span>
+  <div class="flex items-center gap-3">
+    <img
+      src="img/logoNombre.jpg"
+      alt="ViaLibre"
+      class="h-10 w-auto object-contain"
+    />
   </div>
   <div class="flex items-center gap-lg">
     <a

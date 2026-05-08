@@ -13,53 +13,49 @@
       theme: {
         extend: {
           "colors": {
-            "surface-container-lowest": "#ffffff",
-            "on-error-container": "#93000a",
-            "on-surface-variant": "#3d4a3d",
-            "surface-container": "#e5eeff",
-            "on-secondary-container": "#5c647a",
-            "on-tertiary-fixed-variant": "#7f2a21",
-            "surface-variant": "#d3e4fe",
+            "primary": "#7c3aed",
+            "primary-container": "#a855f7",
+            "primary-fixed-dim": "#8b5cf6",
+            "primary-fixed": "#c4b5fd",
+
+            "background": "#f5f3ff",
+            "surface": "#ffffff",
+            "surface-dim": "#ede9fe",
+            "surface-bright": "#faf5ff",
+
+            "surface-container": "#f3e8ff",
+            "surface-container-low": "#faf5ff",
+            "surface-container-high": "#e9d5ff",
+            "surface-container-highest": "#ddd6fe",
+
+            "on-background": "#111827",
+            "on-surface": "#111827",
+            "on-surface-variant": "#6b7280",
+
+            "secondary": "#6d28d9",
+            "secondary-container": "#ddd6fe",
+            "secondary-fixed": "#c4b5fd",
+            "secondary-fixed-dim": "#8b5cf6",
+
+            "outline": "#c4b5fd",
+            "outline-variant": "#ddd6fe",
+
+            "inverse-primary": "#c084fc",
+            "inverse-surface": "#1f2937",
+            "inverse-on-surface": "#f9fafb",
+
+            "tertiary": "#22c55e",
+            "tertiary-container": "#bbf7d0",
+
+            "error": "#ef4444",
+            "error-container": "#fee2e2",
+
             "on-primary": "#ffffff",
-            "tertiary": "#9e4036",
-            "on-secondary-fixed": "#131b2e",
-            "surface-container-low": "#eff4ff",
-            "background": "#f8f9ff",
-            "surface-container-highest": "#d3e4fe",
-            "primary-fixed": "#6bff8f",
-            "outline": "#6d7b6c",
-            "inverse-surface": "#213145",
-            "error-container": "#ffdad6",
-            "on-tertiary": "#ffffff",
-            "on-surface": "#0b1c30",
-            "primary": "#006e2f",
-            "inverse-on-surface": "#eaf1ff",
-            "secondary": "#565e74",
-            "surface-bright": "#f8f9ff",
-            "on-error": "#ffffff",
-            "tertiary-container": "#ff8b7c",
-            "tertiary-fixed-dim": "#ffb4a9",
-            "primary-container": "#22c55e",
-            "on-primary-fixed": "#002109",
-            "secondary-fixed": "#dae2fd",
-            "secondary-container": "#dae2fd",
-            "primary-fixed-dim": "#4ae176",
-            "surface-dim": "#cbdbf5",
-            "outline-variant": "#bccbb9",
-            "surface-container-high": "#dce9ff",
-            "error": "#ba1a1a",
-            "on-tertiary-fixed": "#410001",
-            "tertiary-fixed": "#ffdad5",
-            "on-secondary-fixed-variant": "#3f465c",
-            "on-background": "#0b1c30",
-            "on-primary-container": "#004b1e",
-            "on-tertiary-container": "#76231b",
-            "surface": "#f8f9ff",
-            "on-primary-fixed-variant": "#005321",
-            "secondary-fixed-dim": "#bec6e0",
-            "surface-tint": "#006e2f",
+            "on-primary-container": "#ffffff",
             "on-secondary": "#ffffff",
-            "inverse-primary": "#4ae176"
+            "on-secondary-container": "#4c1d95",
+            "on-error": "#ffffff",
+            "on-error-container": "#991b1b"
           },
           "borderRadius": {
             "DEFAULT": "0.25rem",
@@ -103,7 +99,36 @@
       display: inline-block;
       vertical-align: middle;
     }
-    body { font-family: 'Inter', sans-serif; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f3ff;
+    }
+
+    /* NUEVA PALETA */
+    :root{
+      --violet-primary:#7c3aed;
+      --violet-dark:#5b21b6;
+      --violet-light:#a855f7;
+      --violet-soft:#ede9fe;
+      --violet-bg:#f5f3ff;
+      --dark:#111827;
+    }
+
+    .hero-gradient{
+      background: linear-gradient(
+        135deg,
+        #5b21b6 0%,
+        #7c3aed 45%,
+        #a855f7 100%
+      );
+    }
+
+    .glass-card{
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
   </style>
 </head>
 
@@ -111,8 +136,12 @@
 <body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopAppBar -->
 <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin h-16 bg-surface dark:bg-on-surface shadow-sm">
-  <div class="flex items-center gap-md">
-    <span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">ViaLibre</span>
+  <div class="flex items-center gap-3">
+    <img
+      src="img/logoNombre.jpg"
+      alt="ViaLibre"
+      class="h-10 w-auto object-contain"
+    />
   </div>
   <div class="flex items-center gap-lg">
     <a
@@ -394,19 +423,16 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white/80 backdrop-blur-md w-full mt-auto py-12 px-6 border-t border-slate-200">
+  <!-- REEMPLAZA EL FOOTER -->
+  <footer class="bg-[#0f172a] w-full mt-auto py-14 px-6">
 
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
 
       <!-- Logo -->
-      <div class="flex flex-col items-center md:items-start gap-2">
+      <div class="flex flex-col items-center md:items-start gap-4">
 
-      <span class="font-black text-slate-900 text-2xl tracking-tight">
-        ViaLibre
-      </span>
-
-        <p class="text-sm text-slate-500">
-          © 2025 ViaLibre. Smart mobility for modern cities.
+        <p class="text-sm text-slate-400">
+          © 2025 ViaLibre. Navegación inteligente para ciudades modernas.
         </p>
 
       </div>
@@ -414,20 +440,20 @@
       <!-- Links -->
       <div class="flex gap-8 flex-wrap justify-center">
 
-        <a class="text-sm text-slate-500 hover:text-green-600 transition-colors" href="#">
-          Privacy
+        <a class="text-sm text-slate-400 hover:text-purple-400 transition-colors" href="#">
+          Privacidad
         </a>
 
-        <a class="text-sm text-slate-500 hover:text-green-600 transition-colors" href="#">
-          Terms
+        <a class="text-sm text-slate-400 hover:text-purple-400 transition-colors" href="#">
+          Términos
         </a>
 
-        <a class="text-sm text-slate-500 hover:text-green-600 transition-colors" href="#">
-          About
+        <a class="text-sm text-slate-400 hover:text-purple-400 transition-colors" href="#">
+          Nosotros
         </a>
 
-        <a class="text-sm text-slate-500 hover:text-green-600 transition-colors" href="#">
-          Contact
+        <a class="text-sm text-slate-400 hover:text-purple-400 transition-colors" href="#">
+          Contacto
         </a>
 
       </div>
@@ -435,7 +461,7 @@
       <!-- Social -->
       <div class="flex gap-4">
 
-        <button class="w-11 h-11 rounded-2xl bg-slate-100 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all">
+        <button class="w-12 h-12 rounded-2xl bg-white/10 text-white flex items-center justify-center hover:bg-purple-600 transition-all">
 
         <span class="material-symbols-outlined">
           language
@@ -443,7 +469,7 @@
 
         </button>
 
-        <button class="w-11 h-11 rounded-2xl bg-slate-100 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all">
+        <button class="w-12 h-12 rounded-2xl bg-white/10 text-white flex items-center justify-center hover:bg-purple-600 transition-all">
 
         <span class="material-symbols-outlined">
           mail
