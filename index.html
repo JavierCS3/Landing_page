@@ -210,29 +210,132 @@
 
       </div>
 
-      <!-- LADO DERECHO VIDEO -->
-      <div class="relative">
+      <!-- VIDEO SECTION -->
+      <div class="relative flex justify-center items-center w-full">
 
-        <div class="absolute -top-20 -right-20 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl opacity-30"></div>
+        <!-- Glow decorativo -->
+        <div class="absolute -top-10 -right-10 w-72 h-72 bg-violet-500/20 rounded-full blur-3xl opacity-40"></div>
 
-        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl opacity-30"></div>
+        <!-- Card -->
+        <div class="relative w-full max-w-[720px] rounded-[2.5rem] bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.12)] border border-white/50 overflow-hidden">
 
-        <div class="relative bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100 transform lg:rotate-3">
-
+          <!-- Video -->
           <video
-            class="rounded-[2rem] w-full h-[500px] object-cover"
-            autoplay
+            id="demoVideo"
+            class="w-full aspect-video rounded-[2rem] object-cover bg-black"
             muted
-            loop
             playsinline
+            preload="metadata"
+            poster="img/poster.jpg"
           >
-            <source src="tu-video.mp4" type="video/mp4">
+            <source src="img/video.mp4" type="video/mp4">
             Tu navegador no soporta video.
           </video>
+
+          <!-- Overlay oscuro -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent rounded-[2rem] pointer-events-none"></div>
+
+          <!-- Texto -->
+          <div class="absolute bottom-8 left-8 z-20 max-w-md">
+            <p class="text-violet-300 text-xs font-semibold uppercase tracking-[0.2em] mb-2">
+              Demo de la app
+            </p>
+
+            <h3 class="text-white text-3xl font-bold leading-tight">
+              Mira ViaLibre en acción
+            </h3>
+
+            <p class="text-white/80 mt-3 text-sm leading-relaxed">
+              Descubre cómo encuentra rutas rápidas y evita el tráfico en tiempo real.
+            </p>
+          </div>
+
+          <!-- Botón Play -->
+          <button
+            id="playBtn"
+            class="absolute inset-0 z-30 flex items-center justify-center group"
+          >
+            <div class="relative">
+
+              <!-- Glow -->
+              <div class="absolute inset-0 bg-violet-500/40 blur-2xl rounded-full scale-150 opacity-70 group-hover:opacity-100 transition"></div>
+
+              <!-- Botón -->
+              <div class="relative w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center transition duration-300 group-hover:scale-110 group-hover:bg-white/30 shadow-2xl">
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-12 h-12 text-white ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+
+              </div>
+
+            </div>
+          </button>
 
         </div>
 
       </div>
+
+      <!-- MODAL VIDEO -->
+      <div
+        id="videoModal"
+        class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden items-center justify-center p-4"
+      >
+
+        <!-- Botón cerrar -->
+        <button
+          id="closeModal"
+          class="absolute top-6 right-6 text-white text-5xl font-light hover:scale-110 transition z-50"
+        >
+          &times;
+        </button>
+
+        <!-- Video grande -->
+        <video
+          id="fullscreenVideo"
+          class="w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl border border-white/10"
+          controls
+        >
+          <source src="img/video.mp4" type="video/mp4">
+        </video>
+
+      </div>
+
+      <script>
+        const playBtn = document.getElementById("playBtn");
+        const modal = document.getElementById("videoModal");
+        const closeModal = document.getElementById("closeModal");
+        const fullscreenVideo = document.getElementById("fullscreenVideo");
+
+        playBtn.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+
+          fullscreenVideo.currentTime = 0;
+          fullscreenVideo.play();
+        });
+
+        closeModal.addEventListener("click", closeVideo);
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            closeVideo();
+          }
+        });
+
+        function closeVideo() {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+
+          fullscreenVideo.pause();
+          fullscreenVideo.currentTime = 0;
+        }
+      </script>
 
     </div>
   </section>
