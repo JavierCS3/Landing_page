@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" xmlns="http://www.w3.org/1999/html"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Support - ViaLibre</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#0b1c30",
+            "inverse-surface": "#213145",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#4ae176",
+            "surface-variant": "#d3e4fe",
+            "on-tertiary": "#ffffff",
+            "primary": "#006e2f",
+            "inverse-on-surface": "#eaf1ff",
+            "on-secondary-fixed": "#131b2e",
+            "on-primary-container": "#004b1e",
+            "inverse-primary": "#4ae176",
+            "surface-container-low": "#eff4ff",
+            "on-error-container": "#93000a",
+            "secondary-container": "#dae2fd",
+            "primary-fixed": "#6bff8f",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#bec6e0",
+            "secondary": "#565e74",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface": "#f8f9ff",
+            "surface-container-high": "#dce9ff",
+            "on-tertiary-fixed": "#410001",
+            "on-surface-variant": "#3d4a3d",
+            "on-tertiary-fixed-variant": "#7f2a21",
+            "on-secondary-container": "#5c647a",
+            "on-background": "#0b1c30",
+            "tertiary-fixed": "#ffdad5",
+            "outline-variant": "#bccbb9",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#d3e4fe",
+            "on-primary-fixed": "#002109",
+            "on-error": "#ffffff",
+            "background": "#f8f9ff",
+            "tertiary": "#9e4036",
+            "on-primary-fixed-variant": "#005321",
+            "tertiary-container": "#ff8b7c",
+            "outline": "#6d7b6c",
+            "surface-container": "#e5eeff",
+            "surface-bright": "#f8f9ff",
+            "surface-dim": "#cbdbf5",
+            "on-primary": "#ffffff",
+            "surface-tint": "#006e2f",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#ffb4a9",
+            "secondary-fixed": "#dae2fd",
+            "primary-container": "#22c55e",
+            "on-tertiary-container": "#76231b"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "xl": "32px",
+            "container-margin": "16px",
+            "gutter": "12px",
+            "unit": "4px",
+            "lg": "24px",
+            "xs": "4px",
+            "md": "16px",
+            "sm": "8px"
+          },
+          "fontFamily": {
+            "headline-md": ["Inter"],
+            "label-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-bold": ["Inter"]
+          },
+          "fontSize": {
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+            "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9ff;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #006e2f 0%, #22c55e 100%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-margin h-16 bg-surface dark:bg-on-surface shadow-sm">
+  <div class="flex items-center gap-md">
+    <span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">ViaLibre</span>
+  </div>
+  <div class="flex items-center gap-lg">
+    <a
+      class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-colors px-md py-sm rounded-lg"
+      href="index.html"
+    >
+      home
+    </a>
+
+    <div class="hidden md:flex items-center gap-md">
+      <a
+        class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-colors px-md py-sm rounded-lg"
+        href="https://sistema-monitoreo-trafico.vercel.app/"
+        target="_blank"
+      >
+        Routes
+      </a>
+
+
+
+      <a
+        class="text-primary dark:text-primary-fixed-dim font-bold hover:bg-surface-container-low transition-colors px-md py-sm rounded-lg"
+        href="support.html"
+      >
+        Support
+      </a>
+    </div>
+    <div class="flex items-center gap-sm">
+      <button class="material-symbols-outlined p-sm text-on-surface hover:bg-surface-container-low rounded-full transition-colors active:scale-95">notifications</button>
+      <button class="material-symbols-outlined p-sm text-on-surface hover:bg-surface-container-low rounded-full transition-colors active:scale-95">account_circle</button>
+    </div>
+  </div>
+</header>
+<main class="pt-16 pb-24">
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-xl px-container-margin flex flex-col items-center justify-center text-center">
+    <div class="max-w-3xl w-full">
+      <h1 class="font-headline-lg text-4xl mb-md">¿Necesitas ayuda con ViaLibre?</h1>
+      <p class="text-body-lg mb-lg opacity-90">Descubre cómo ViaLibre puede ayudarte a evitar el tráfico, ahorrar tiempo y moverte de forma más inteligente todos los días.
+      </p>
+      <div class="relative w-full max-w-xl mx-auto">
+        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+        <input class="w-full pl-12 pr-4 py-4 rounded-xl bg-white text-on-surface border-none focus:ring-2 focus:ring-primary-container shadow-lg" placeholder="Search for answers..." type="text"/>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-6xl mx-auto px-container-margin mt-xl">
+    <!-- FAQ Categories Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md mb-xl">
+      <div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <span class="material-symbols-outlined text-primary text-4xl mb-md block group-hover:scale-110 transition-transform">account_balance_wallet</span>
+        <h3 class="font-headline-md text-headline-md mb-xs">
+          Tu Cuenta ViaLibre
+        </h3>
+
+        <p class="text-body-sm text-on-surface-variant">
+          Administra tu perfil, personaliza rutas y sincroniza tus preferencias de movilidad.
+        </p>
+      </div>
+      <div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <span class="material-symbols-outlined text-primary text-4xl mb-md block group-hover:scale-110 transition-transform">directions_bus</span>
+        <h3 class="font-headline-md text-headline-md mb-xs">
+          Rutas Inteligentes
+        </h3>
+
+        <p class="text-body-sm text-on-surface-variant">
+          Encuentra caminos más rápidos usando tráfico en tiempo real y predicciones inteligentes.
+        </p>
+      </div>
+      <div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <span class="material-symbols-outlined text-primary text-4xl mb-md block group-hover:scale-110 transition-transform">school</span>
+        <h3 class="font-headline-md text-headline-md mb-xs">
+          Navegación Inteligente
+        </h3>
+
+        <p class="text-body-sm text-on-surface-variant">
+          Recibe recomendaciones automáticas para reducir tiempo y evitar congestionamientos.
+        </p>
+      </div>
+      <div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-all cursor-pointer group">
+        <span class="material-symbols-outlined text-primary text-4xl mb-md block group-hover:scale-110 transition-transform">security</span>
+        <h3 class="font-headline-md text-headline-md mb-xs">
+          Seguridad y Alertas
+        </h3>
+
+        <p class="text-body-sm text-on-surface-variant">
+          Mantente informado sobre accidentes, tráfico pesado y zonas con alta congestión.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-xl">
+
+      <!-- Preguntas Frecuentes -->
+      <div class="lg:col-span-2 space-y-md">
+
+        <h2 class="font-headline-lg text-headline-lg mb-lg">
+          Preguntas Frecuentes
+        </h2>
+
+        <!-- FAQ 1 -->
+        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors">
+        <span class="font-body-lg font-semibold">
+          ¿Cómo funciona el tráfico en tiempo real?
+        </span>
+
+            <span id="icon-1" class="material-symbols-outlined transition-transform">
+          expand_more
+        </span>
+          </button>
+
+          <div id="faq-1" class="hidden p-md text-body-sm text-on-surface-variant border-t border-outline-variant bg-surface">
+            ViaLibre analiza información de movilidad en tiempo real para recomendar rutas más rápidas y eficientes según el tráfico actual.
+            La aplicación detecta congestionamientos, accidentes y calles saturadas para ayudarte a ahorrar tiempo todos los días.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors">
+        <span class="font-body-lg font-semibold">
+          ¿ViaLibre funciona en toda la ciudad?
+        </span>
+
+            <span id="icon-2" class="material-symbols-outlined transition-transform">
+          expand_more
+        </span>
+          </button>
+
+          <div id="faq-2" class="hidden p-md text-body-sm text-on-surface-variant border-t border-outline-variant bg-surface">
+            Sí. ViaLibre está diseñado para funcionar en las principales zonas urbanas y universitarias,
+            mostrando rutas inteligentes, tráfico en vivo y alternativas rápidas para moverte mejor.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(3)" class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors">
+        <span class="font-body-lg font-semibold">
+          ¿La aplicación es gratuita?
+        </span>
+
+            <span id="icon-3" class="material-symbols-outlined transition-transform">
+          expand_more
+        </span>
+          </button>
+
+          <div id="faq-3" class="hidden p-md text-body-sm text-on-surface-variant border-t border-outline-variant bg-surface">
+            Sí. ViaLibre ofrecerá funciones gratuitas para navegación inteligente,
+            alertas de tráfico y recomendaciones de rutas en tiempo real.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(4)" class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors">
+        <span class="font-body-lg font-semibold">
+          ¿Puedo reportar accidentes o tráfico pesado?
+        </span>
+
+            <span id="icon-4" class="material-symbols-outlined transition-transform">
+          expand_more
+        </span>
+          </button>
+
+          <div id="faq-4" class="hidden p-md text-body-sm text-on-surface-variant border-t border-outline-variant bg-surface">
+            Claro. Los usuarios pueden reportar incidentes, tráfico intenso o calles bloqueadas
+            para ayudar a mejorar la información en tiempo real para toda la comunidad.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(5)" class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors">
+        <span class="font-body-lg font-semibold">
+          ¿Cuándo estará disponible ViaLibre?
+        </span>
+
+            <span id="icon-5" class="material-symbols-outlined transition-transform">
+          expand_more
+        </span>
+          </button>
+
+          <div id="faq-5" class="hidden p-md text-body-sm text-on-surface-variant border-t border-outline-variant bg-surface">
+            ViaLibre estará disponible próximamente para Android y iPhone.
+            Nuestro objetivo es ofrecer una experiencia moderna, rápida y fácil de usar para estudiantes y ciudadanos.
+          </div>
+        </div>
+
+      </div>
+      <p></p>
+      <p></p>
+    </div>
+
+    <script>
+      function toggleFaq(id) {
+        const content = document.getElementById(`faq-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+
+        content.classList.toggle("hidden");
+
+        icon.classList.toggle("rotate-180");
+      }
+
+
+    </script>
+      <!-- Contact Us Section -->
+      <div class="space-y-lg">
+        <div class="bg-white p-lg rounded-xl border border-outline-variant shadow-lg">
+          <h2 class="font-headline-lg text-headline-lg mb-md">Contact Us</h2>
+          <form class="space-y-md">
+            <div>
+              <label class="block font-label-bold text-on-surface-variant mb-xs"> Nombre Completo</label>
+              <input class="w-full bg-[#f1f5f9] border-none rounded-lg p-sm focus:ring-2 focus:ring-primary" pplaceholder="Tu nombre" type="text"/>
+            </div>
+            <div>
+              <label class="block font-label-bold text-on-surface-variant mb-xs">Correo Electrónico</label>
+              <input class="w-full bg-[#f1f5f9] border-none rounded-lg p-sm focus:ring-2 focus:ring-primary" placeholder="correo@ejemplo.com" type="email"/>
+            </div>
+            <div>
+              <label class="block font-label-bold text-on-surface-variant mb-xs">Mensaje</label>
+              <textarea class="w-full bg-[#f1f5f9] border-none rounded-lg p-sm h-32 focus:ring-2 focus:ring-primary" placeholder="¿Cómo podemos ayudarte?"></textarea>
+            </div>
+            <button class="w-full bg-primary-container text-on-primary-container font-headline-md py-md rounded-xl hover:opacity-90 active:scale-95 transition-all">
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+        <div class="bg-surface-container p-md rounded-xl space-y-md">
+          <h3 class="font-label-bold text-on-surface-variant uppercase tracking-wider"> Más formas de conectar</h3>
+          <div class="flex items-center gap-md">
+            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-primary">mail</span>
+            </div>
+            <div>
+              <p class="font-body-lg font-semibold">soporte@vialibre.com</p>
+              <p class="text-body-sm text-on-surface-variant">Atención de lunes a viernes</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-md">
+            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-primary">share</span>
+            </div>
+            <div>
+              <p class="font-body-lg font-semibold">@ViaLibreApp
+              </p>
+              <p class="text-body-sm text-on-surface-variant"> Noticias, actualizaciones y tráfico en tiempo real
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Visual Decorative Section -->
+    <div class="mt-xl h-64 rounded-xl overflow-hidden relative">
+      <img alt="University Campus" class="w-full h-full object-cover grayscale opacity-20" data-alt="A serene, wide-angle shot of a modern university campus featuring clean white architectural lines and lush green lawns under a bright, high-key midday sun. The visual style is professional and corporate, emphasizing structured reliability and open academic spaces. The lighting is soft and airy, creating a light-mode aesthetic that complements the primary green and white brand colors. The mood is calm, organized, and focused on institutional excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZwORRhm4A-gcVTBOqmneYnbRSVb5f2tk3FTnNoSNKFJk4UwQYbjjsFo67gSCTySufMj1KejpALBcCEBOLI8RjYGp8xEXCZPG2Z0enxGKQKhpDGlly-Km3uSrDzr66cXnDzatbvqUzlBANvncrZisSaz5AKNiuvsDzP7VLbQU-jVsROnL0OnpibtSMDcWmGlTRG0OyWe20BULjE3P61XWRnM4OR1XCyAagRaLnQWNW9Gxr9YvbxigLQ5k6bLLTRZCq5QYVB7xMiUXT"/>
+      <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-background to-transparent">
+        <p class="font-headline-md text-primary">Muévete más rápido con ViaLibre
+        </p>
+        <p class="text-body-sm text-on-surface-variant">Miles de usuarios ya optimizan sus rutas diariamente con inteligencia en tiempo real.
+        </p>
+    </div>
+  </div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-surface-container-lowest dark:bg-inverse-surface pb-safe pt-2 px-container-margin border-t border-outline-variant shadow-lg">
+  <a
+    href="https://sistema-monitoreo-trafico.vercel.app/"
+    target="_blank"
+    class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-variant transition-all active:scale-90"
+  >
+    <span class="material-symbols-outlined">directions_bus</span>
+    <span class="font-label-md text-label-md">Routes</span>
+  </a>
+
+  <div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:bg-surface-variant transition-all active:scale-90">
+    <span class="material-symbols-outlined">warning</span>
+    <span class="font-label-md text-label-md">Alerts</span>
+  </div>
+
+  <a
+    href="support.html"
+    class="flex flex-col items-center justify-center bg-primary-container dark:bg-on-primary-fixed-variant text-on-primary-container dark:text-primary-fixed rounded-full px-4 py-1 active:scale-90"
+  >
+    <span class="material-symbols-outlined">help_outline</span>
+    <span class="font-label-md text-label-md">Support</span>
+  </a>
+</nav>
+</body></html>
